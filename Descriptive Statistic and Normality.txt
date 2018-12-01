@@ -1,0 +1,95 @@
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+lognormalvar = np.random.lognormal([50,2,100], 100)
+
+plt.hist(lognormalvar)
+
+plt.axvline(lognormalvar.mean(), color='c', linestyle='solid', linewidth=2)
+
+plt.axvline(lognormalvar.mean() + lognormalvar.std(), color='c', linestyle='dashed', linewidth=2)
+
+plt.axvline(lognormalvar.mean()-lognormalvar.std(), color='c', linestyle='dashed', linewidth=2) 
+
+plt.show()
+
+gumbelvar = np.random.gumbel([50,10,100], 100)
+
+plt.hist(gumbelvar)
+
+plt.axvline(gumbelvar.mean(), color='c', linestyle='solid', linewidth=2)
+
+plt.axvline(gumbelvar.mean() + gumbelvar.std(), color='c', linestyle='dashed', linewidth=2)
+
+plt.axvline(gumbelvar.mean()-gumbelvar.std(), color='c', linestyle='dashed', linewidth=2) 
+
+plt.show()
+
+normalvar = np.random.normal([0,1000,100], 100)
+
+plt.hist(normalvar)
+
+plt.axvline(normalvar.mean(), color='c', linestyle='solid', linewidth=2)
+
+plt.axvline(normalvar.mean() + normalvar.std(), color='c', linestyle='dashed', linewidth=2)
+
+plt.axvline(normalvar.mean()-normalvar.std(), color='c', linestyle='dashed', linewidth=2) 
+
+plt.show()
+
+fvar = np.random.f([3,6,9], 100)
+
+plt.hist(fvar)
+
+plt.axvline(fvar.mean(), color='c', linestyle='solid', linewidth=2)
+
+plt.axvline(fvar.mean() + fvar.std(), color='c', linestyle='dashed', linewidth=2)
+
+plt.axvline(fvar.mean()-fvar.std(), color='c', linestyle='dashed', linewidth=2) 
+
+plt.show()
+
+betavar = np.random.beta([25,17,30], 100)
+
+plt.hist(betavar)
+
+plt.axvline(betavar.mean(), color='c', linestyle='solid', linewidth=2)
+
+plt.axvline(betavar.mean() + betavar.std(), color='c', linestyle='dashed', linewidth=2)
+
+plt.axvline(betavar.mean()-betavar.std(), color='c', linestyle='dashed', linewidth=2) 
+
+plt.show()
+
+dirichletvar = np.random.dirichlet([22,4], 100)
+
+plt.hist(dirichletvar)
+
+plt.axvline(dirichletvar.mean(), color='c', linestyle='solid', linewidth=2)
+
+plt.axvline(dirichletvar.mean() + dirichletvar.std(), color='c', linestyle='dashed', linewidth=2)
+
+plt.axvline(dirichletvar.mean()-dirichletvar.std(), color='c', linestyle='dashed', linewidth=2) 
+
+plt.show()
+
+var1=np.random.normal(5,0.5,100)
+var2=np.random.normal(10,1,100)
+
+var3=var1+var2
+
+plt.hist(var3)
+
+plt.axvline(var3.mean(), color='c', linestyle='solid', linewidth=2)
+
+plt.axvline(var3.mean() + var3.std(), color='c', linestyle='dashed', linewidth=2)
+
+plt.axvline(var3.mean()-var3.std(), color='c', linestyle='dashed', linewidth=2) 
+
+plt.show()
+
+## The results depend on the data from the random numbers of var1 and var2. Generally the numbers do not appear to be
+## to be normally distributed as they are a combination of the two lists which have differne central tendancies
